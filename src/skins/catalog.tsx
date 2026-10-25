@@ -11,8 +11,13 @@ function skin<T>(load: () => Promise<T>, name: keyof T) {
   }));
 }
 const mymy = () => import("../vendor/mymy/Apps");
+```ts
+const mymyStoryKakao = () => import("../vendor/mymy/StoryKakao");
+```
 export const catalogSkins = {
-  kakao: skin(mymy, "MymyKakao"),
+  ```ts
+kakao: skin(mymyStoryKakao, "StoryKakao"),
+```
   instagram: skin(mymy, "MymyInstagram"),
   phone: skin(system, "PhoneSkin"),
   contacts: skin(system, "ContactsSkin"),
